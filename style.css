@@ -392,3 +392,71 @@ footer a:hover {
 ::-webkit-scrollbar-thumb:hover {
     background: #ea580c;
 }
+
+/* Early Testers Section */
+#early-testers {
+    background: linear-gradient(rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.98));
+    border-top: 3px solid var(--warning);
+    border-bottom: 3px solid var(--warning);
+}
+
+.reward-list {
+    margin: 20px 0;
+}
+
+.reward-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    border-left: 4px solid var(--success);
+    transition: transform 0.3s, background 0.3s;
+}
+
+.reward-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateX(5px);
+}
+
+.reward-badge {
+    background: var(--warning);
+    color: #000;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    min-width: 100px;
+    text-align: center;
+}
+
+.reward-text {
+    flex-grow: 1;
+    margin-left: 15px;
+    font-size: 1rem;
+}
+
+#early-testers .card {
+    background: rgba(30, 41, 59, 0.7);
+    border: 1px solid rgba(249, 115, 22, 0.3);
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+#early-testers .card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary);
+}
+
+#early-testers .btn-warning {
+    background: linear-gradient(to right, #f59e0b, #fbbf24);
+    border: none;
+    color: #000;
+    font-weight: bold;
+    padding: 12px 30px;
+}
+
+#early-testers .btn-warning:hover {
+    background: linear-gradient(to right, #d97706, #f59e0b);
+}

@@ -1,0 +1,372 @@
+/* Wolf Pack Landing Page Styles */
+
+:root {
+    --primary: #f97316; /* Orange */
+    --secondary: #1e293b; /* Dark blue */
+    --dark: #0f172a; /* Darker blue */
+    --light: #f8fafc; /* Light gray */
+    --success: #10b981; /* Green */
+    --warning: #f59e0b; /* Amber */
+    --danger: #ef4444; /* Red */
+    --info: #3b82f6; /* Blue */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--dark);
+    color: white;
+    padding-top: 76px; /* For fixed navbar */
+}
+
+/* Navigation */
+.navbar {
+    background-color: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-brand {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--primary) !important;
+}
+
+.navbar-brand i {
+    margin-right: 10px;
+}
+
+.nav-link {
+    color: #cbd5e1 !important;
+    font-weight: 500;
+    margin: 0 8px;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: var(--primary) !important;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.95)), 
+                url('https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
+    background-size: cover;
+    background-position: center;
+    min-height: 80vh;
+    padding: 100px 0;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    background: linear-gradient(to right, #f97316, #fbbf24);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 20px;
+}
+
+.slogan {
+    font-size: 1.8rem;
+    color: #cbd5e1;
+    font-style: italic;
+    margin-bottom: 30px;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    padding: 12px 30px;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #ea580c;
+    border-color: #ea580c;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(249, 115, 22, 0.3);
+}
+
+.btn-outline-light:hover {
+    background-color: white;
+    color: var(--dark);
+}
+
+/* Sections */
+section {
+    padding: 80px 0;
+}
+
+section.bg-light {
+    background-color: #1e293b !important;
+    color: white;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+    position: relative;
+    display: inline-block;
+}
+
+h2:after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 4px;
+    background: var(--primary);
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+/* Cards */
+.card {
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 12px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    color: #cbd5e1;
+    height: 100%;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    border-color: var(--primary);
+}
+
+.card-body {
+    padding: 30px;
+}
+
+.card h4 {
+    color: white;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.card h4 i {
+    margin-right: 10px;
+    color: var(--primary);
+}
+
+/* Tokenomics */
+.list-group-item {
+    background-color: transparent;
+    color: #cbd5e1;
+    border-color: #334155;
+    padding: 15px 0;
+}
+
+.badge {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 20px;
+}
+
+/* Roadmap Timeline */
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.timeline:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: var(--primary);
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 40px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.timeline-item:nth-child(odd) {
+    flex-direction: row-reverse;
+}
+
+.timeline-date {
+    width: 180px;
+    padding: 12px 20px;
+    background: var(--primary);
+    color: white;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 30px;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 5px 15px rgba(249, 115, 22, 0.4);
+}
+
+.timeline-item:nth-child(even) .timeline-date {
+    margin-right: 30px;
+}
+
+.timeline-item:nth-child(odd) .timeline-date {
+    margin-left: 30px;
+}
+
+.timeline-content {
+    width: calc(50% - 120px);
+    padding: 25px;
+    background: #1e293b;
+    border-radius: 12px;
+    border: 1px solid #334155;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+    margin-left: 30px;
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+    margin-right: 30px;
+}
+
+.timeline-content h4 {
+    color: var(--primary);
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.timeline-content p {
+    color: #cbd5e1;
+    margin: 0;
+}
+
+/* Team */
+.team-avatar {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, var(--primary), var(--warning));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    color: white;
+}
+
+.text-muted {
+    color: #94a3b8 !important;
+}
+
+/* Footer */
+footer {
+    background-color: #0a0f1c;
+    color: #94a3b8;
+    border-top: 1px solid #334155;
+}
+
+footer h5 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+footer a {
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: var(--primary) !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .slogan {
+        font-size: 1.3rem;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+    
+    .timeline:before {
+        left: 30px;
+    }
+    
+    .timeline-item {
+        flex-direction: row !important;
+        margin-left: 60px;
+    }
+    
+    .timeline-date {
+        width: 140px;
+        position: absolute;
+        left: -180px;
+        margin: 0 !important;
+    }
+    
+    .timeline-content {
+        width: 100%;
+        margin: 0 !important;
+    }
+    
+    section {
+        padding: 60px 0;
+    }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card, .timeline-item {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* Demo button */
+#playDemo {
+    background-color: var(--success);
+    border-color: var(--success);
+}
+
+#playDemo:hover {
+    background-color: #0da271;
+    border-color: #0da271;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1e293b;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ea580c;
+}
